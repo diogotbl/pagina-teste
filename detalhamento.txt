@@ -1,0 +1,91 @@
+Crie uma landing page completa e responsiva em HTML único para uma empresa de 
+transportes chamada "VeloTrans Logística". A página deve ser production-ready, 
+com design profissional que transmita confiança, velocidade e segurança.
+
+## IDENTIDADE VISUAL
+
+- **Tom/Mood:** Sólido, confiável, moderno — como as marcas DHL e Maersk,  
+  mas com identidade própria.
+- **Paleta de cores:** Azul-aço escuro (#0a1f44) como cor principal, 
+  laranja vibrante (#f57c00) como acento/CTA, e superfícies neutras claras. 
+  Incluir modo claro e escuro (toggle no header).
+- **Tipografia:** Fonte display "Sora" (Google Fonts) para títulos + 
+  "Work Sans" para corpo de texto. 
+- **Logo:** SVG inline personalizado com ícone de caminhão/seta estilizado 
+  + nome "VeloTrans".
+
+## SEÇÕES OBRIGATÓRIAS (nesta ordem)
+
+1. **Header fixo:** Logo à esquerda, links de navegação, toggle dark/light mode 
+   e botão CTA "Solicitar Cotação" em destaque.
+
+2. **Hero Section (fullscreen):** 
+   - Heading dramático em --text-2xl ou --text-3xl
+   - Tagline objetiva (ex: "Transportamos seu negócio com precisão e pontualidade")
+   - Dois CTAs: primário "Solicitar Cotação" e secundário "Ver Serviços"
+   - Imagem hero de um caminhão moderno em rodovia (gerar via generate_image)
+   - Contador animado com números de destaque (ex: +500 clientes, 15 anos, 48h entrega)
+
+3. **Serviços (cards em grid):**
+   - Transporte Rodoviário Nacional
+   - Transporte Fracionado
+   - Carga Refrigerada
+   - Logística Reversa
+   Layout assimétrico: 1 card grande (col-span 2) + 3 cards menores. 
+   Sem ícones em círculos coloridos — usar tipografia e imagens.
+
+4. **Diferenciais (seção two-column assimétrica):**
+   - Coluna esquerda: imagem editorial de galpão/frota (gerar)
+   - Coluna direita: lista de diferenciais com microcopy explicativo
+   (Rastreamento em tempo real, Frota própria de 200+ veículos, ISO 9001, etc.)
+
+5. **Cobertura Geográfica:**
+   - Texto sobre abrangência nacional + principais estados atendidos
+   - Visual de destaque (pode ser mapa estilizado em CSS/SVG ou imagem)
+
+6. **Depoimentos/Clientes:**
+   - 3 cards de depoimentos com nome, empresa e citação
+   - Logotipos fictícios de clientes (SVG simples)
+
+7. **Formulário de Cotação (seção destacada com background escuro):**
+   - Campos: Nome, Empresa, Telefone, Origem, Destino, Tipo de Carga, Peso (kg), Mensagem
+   - Botão "Enviar Cotação" com estado de loading animado
+
+8. **Footer:**
+   - Logo + slogan
+   - Links rápidos, serviços, contato
+   - CNPJ fictício, endereço, redes sociais
+   - Copyright 2025
+
+## REQUISITOS TÉCNICOS
+
+- **Arquivo único:** Todo CSS, JS e HTML em um único arquivo `.html`
+- **Design tokens:** Usar variáveis CSS (--color-*, --text-*, --space-*) 
+  seguindo escala fluida com clamp()
+- **Base CSS:** Incluir reset e base stylesheet com box-sizing, 
+  scroll-behavior, font-smoothing
+- **Responsivo:** Mobile-first, testar em 375px e 1280px+
+- **Touch targets:** Mínimo 44x44px em elementos interativos
+- **Animações de scroll:** Elementos entram com fade + slide-up ao aparecer 
+  na viewport (IntersectionObserver). Respeitar prefers-reduced-motion.
+- **Sem gradient buttons** — botões com cor sólida do acento laranja
+- **Sem 3 features idênticas em linha** — variar layout entre seções
+- **Sem texto centralizado em tudo** — left-align como padrão, 
+  center apenas no hero
+
+## QUALIDADE
+
+- Semantic HTML (header, nav, main, section, article, footer)
+- Um único h1 por página, hierarquia h2/h3 respeitada
+- Alt text descritivo em todas as imagens
+- Focus rings visíveis para navegação por teclado
+- Contraste WCAG AA: 4.5:1 mínimo para texto de corpo
+- Fonte body mínima 16px, labels/meta no mínimo 12px
+
+## ESTÉTICA FINAL
+
+O resultado deve parecer o site de uma empresa séria e estabelecida — 
+não um template genérico. Superfícies neutras com momentos precisos de 
+cor laranja. Uma ou duas quebras de grid intencionais (elemento sobreposto, 
+seção full-bleed). Espaçamento generoso. Sem blobs, sem gradientes decorativos, 
+sem emoji como ícones de design.
